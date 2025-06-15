@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+<body>
+    Num1 <input type="text" class="input" placeholder="enter the first value"/><br/>
+    Num2 <input type="text" class="input" placeholder="enter the second value"/><br/>
+    <button>Save</button>
+    Output <input type="text" class="output" placeholder="output"/><br/>
+</body>
+<script>
+    let btn = document.querySelector("button");
+    let inputs = document.querySelectorAll(".input");
+    let outputField = document.querySelector(".output"); // Select output field separately
+
+    btn.addEventListener("click", () => {
+        let inputValue1 = Number(inputs[0].value);
+        let inputValue2 = Number(inputs[1].value);
+        let output = inputValue1 + inputValue2;
+        outputField.value = output; // Assign output value correctly
+        console.log(output);
+    });
+</script>
+</html>

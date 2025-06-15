@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        font-family: sans-serif;
+      }
+      .main{
+        border: 2px solid red;
+        padding: 30px;
+        height: 300px;
+       
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <h1>Welcome to Learning Dev</h1>
+      <button>Save My Jounery</button>
+      <p>ProCode Solo</p>
+    </div>
+  </body>
+  <script>
+    let btn=document.querySelector("button")
+    btn.addEventListener("click",()=>{
+  btn.parentElement.="red"
+    })
+  </script>
+</html>

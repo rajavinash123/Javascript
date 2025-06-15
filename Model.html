@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal Example</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .model {
+        display: none; /* Hide modal initially */
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px;
+        height: 300px;
+        background: rgb(30, 233, 145);
+        box-shadow: 4px 4px 5px 5px red;
+        padding: 20px;
+      }
+      .model h3 {
+        text-align: center;
+        transition: 0.5s;
+        border-bottom: 1px solid #ccc;
+        position: relative;
+      }
+      .model h3 span {
+        position: absolute;
+        right: 10px;
+        cursor: pointer;
+      }
+      button {
+        margin: 20px;
+        padding: 10px 20px;
+        display: block;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="showModel">Show Modal</button>
+    <div class="model" id="modalBox">
+      <h3>Enquiry now
+        <span id="closeModel">&times;</span>
+      </h3>
+    </div>
+    <script>
+      let btn = document.querySelector("#showModel");
+      let model = document.querySelector("#modalBox");
+      let closeBtn = document.querySelector("#closeModel");
+
+      btn.addEventListener("click", () => {
+        model.style.display = "block"; // Show modal
+      });
+
+      closeBtn.addEventListener("click", () => {
+        model.remove(); // Completely removes the modal from the DOM
+      });
+    </script>
+  </body>
+</html>
